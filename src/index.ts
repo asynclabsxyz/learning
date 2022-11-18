@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import Web3 from "web3";
 import { Command } from "commander";
 import figlet from "figlet";
@@ -10,9 +12,9 @@ import {
 import * as dotenv from 'dotenv';
 dotenv.config()
 
-const ETHEREUM_HTTP_PROVIDER = process.env.ETHEREUM_HTTP_PROVIDER;
+const ETHCLI_HTTP_PROVIDER = process.env.ETHCLI_HTTP_PROVIDER;
 
-export const web3 = new Web3(ETHEREUM_HTTP_PROVIDER);
+export const web3 = new Web3(ETHCLI_HTTP_PROVIDER);
 const program = new Command();
 
 program
