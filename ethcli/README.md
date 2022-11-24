@@ -24,8 +24,10 @@ You must first install Node.js >= v12.0.0 and npm >= 6.12.0.
 
 ## Setup
 1. Install and start a personal blockchain using Ganache on your local machine.
-  1. Install ganache using `npm install ganache`
-  2. Start ganache runing the `ganache` binary in from you command line
+
+Install ganache using `npm install ganache`
+
+Start ganache runing the `ganache` binary in from you command line
 
 When ganache starts the local blockchain it seeds a few test accounts with some Eth loaded in them.
 We will be using them to interact with the blockchain, so make sure you notedown the information it prints when you start the local ganache instance.
@@ -37,9 +39,10 @@ Check the below image in the text highlighted in yellow, note it down and we wil
 
 
 2. Download and Install `ethcli` npm package.
-  1. Clone the repository from Github using `git clone git@github.com:asynclabsxyz/learning.git`
-  2. Install `ethcli` using `cd learning/ethcli && npm install -g .` 
-  
+
+Clone the repository from Github using `git clone git@github.com:asynclabsxyz/learning.git`
+
+Install `ethcli` using `cd learning/ethcli && npm install -g .`
 
 Successfully installation will give you a binary called `ethcli`. Running `ethcli --help` will give you the list of supported operations.
 
@@ -62,7 +65,8 @@ Commands:
 ```
 
 3. Set `ETHCLI_HTTP_PROVIDER` ENV variable.
-  1. `export ETHCLI_HTTP_PROVIDER="http://127.0.0.1:8545`
+
+`export ETHCLI_HTTP_PROVIDER="http://127.0.0.1:8545`
 
 
 
@@ -70,8 +74,10 @@ Commands:
 
 
 1) `getBlock` 
-  1. `ethcli getBlock <blockHashOrBlockNumber>`
-  1. `blockHashOrBlockNumber` - The block number or block hash. Or the string "earliest", "latest" , "pending", "safe" or "finalized" as in the default block parameter.
+
+`ethcli getBlock <blockHashOrBlockNumber>`
+
+`blockHashOrBlockNumber` - The block number or block hash. Or the string "earliest", "latest" , "pending", "safe" or "finalized" as in the default block parameter.
 
 
 ```
