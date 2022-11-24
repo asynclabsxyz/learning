@@ -2,7 +2,6 @@
 
 import Web3 from "web3";
 import { Command } from "commander";
-import figlet from "figlet";
 import {
   getBlock,
   getBalance,
