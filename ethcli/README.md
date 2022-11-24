@@ -1,15 +1,15 @@
-# ethcli - Demo Ethereum transactions using Ganache.
+# ethcli - Exercise(s) to try Ethereum transactions using Ganache and Infura.
 
 
 This is an exercise to experience making transactions on an Ethereum blockchain.
 
-The transactions that you make on the eth blockchain requires paying commision. So for making a transaction we will rely on a local test blockchain environment. Other readonly transactions like getting information about a specific block, balance, etc can be done on the mainnet. 
+The transactions that you make on the eth blockchain requires paying commision. So for making a transaction we will rely on a local test blockchain environment which doesn't require commision. Other readonly transactions like getting information about a specific block, balance, etc can be done on a mainnet fork using Infura. 
 
 
 We will run a local Ethereum blockchain using [ganache](https://trufflesuite.com/ganache/)
 from the Truffle suite.
 
-We will rely on [Infura](https://www.infura.io/) for making transactions on the mainnet.
+We will rely on [Infura](https://www.infura.io/) for making readonly transactions on the mainnet fork.
 
 Internally we use [web3.js](https://web3js.readthedocs.io/en/v1.8.1/) for interacting with the Ethereum blockchain. 
 
@@ -27,10 +27,13 @@ You must first install Node.js >= v12.0.0 and npm >= 6.12.0.
   1. Install ganache using `npm install ganache`
   2. Start ganache runing the `ganache` binary in from you command line
 
-Once ganache is started it internally starts an RPC server and exposed the HTTP URL for interacting with blockchain. You will able to find the HTTP URL in the output it prints as soon as it starts. 
+When ganache starts the local blockchain it seeds a few test accounts with some Eth loaded in them.
+We will be using them to interact with the blockchain, so make sure you notedown the information it prints when you start the local ganache instance.
+
+Also ganache internally starts an RPC server and exposed the HTTP URL for interacting with blockchain.
 
 Check the below image in the text highlighted in yellow, note it down and we will be needing it to set our ENV variable.
-![This is a alt text.](https://i.imgur.com/y122j6A.png "This is a sample image.")
+![Ganache Output.](https://i.imgur.com/y122j6A.png "Ganache Output")
 
 
 2. Download and Install `ethcli` npm package.
@@ -65,17 +68,10 @@ Commands:
 
 ## Exercise(s)
 
-When ganache starts the local blockchain it seeds a few test accounts with some Eth loaded in them.
-
-We will be using them to interact with the blockchain, so make sure you notedown the information it prints when you start the local ganache instance.
-
-Since `ethcli` is a wrapper around `web3.js`, you can find more information about the arguments for each subcommand in the documentation here https://web3js.readthedocs.io/en/v1.8.1/web3-eth.html
 
 1) `getBlock` 
   1. `ethcli getBlock <blockHashOrBlockNumber>`
-  1. Parameters
-  
-    `blockHashOrBlockNumber` - The block number or block hash. Or the string "earliest", "latest" , "pending", "safe" or "finalized" as in the default block parameter.
+  1. `blockHashOrBlockNumber` - The block number or block hash. Or the string "earliest", "latest" , "pending", "safe" or "finalized" as in the default block parameter.
 
 
 ```
@@ -106,10 +102,3 @@ $ ethcli getBlock 0
   uncles: []
 }
 ```
-
-
-
-
-
-
-
